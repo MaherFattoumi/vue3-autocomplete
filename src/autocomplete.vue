@@ -188,7 +188,6 @@
 			},
 			filteredItems() {
 				const regexp = new RegExp(this.escapeRegExp(this.input), 'i');
-
 				return this.items.filter((item) => this.itemProjection(item).match(regexp));
 			},
 			isListVisible() {

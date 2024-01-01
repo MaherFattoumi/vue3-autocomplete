@@ -1,11 +1,21 @@
-# Logs
+# Log files
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+
+# compiled output
+.DS_Store
+node_modules/
+/dist
+/dist-ssr
+/tmp
+/out-tsc
+.vuepress/dist
+/public
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -97,8 +107,7 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
-# vuepress build output
-.vuepress/dist
+
 
 # vuepress v2.x temp and cache directory
 .temp
@@ -130,20 +139,11 @@ dist
 .pnp.*
 
 
-.DS_Store
-node_modules
-/dist
 
 
 # local env files
 .env.local
 .env.*.local
-
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
 
 # Editor directories and files
 .idea
@@ -156,11 +156,7 @@ pnpm-debug.log*
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
-/dist
-/dist-ssr
-/tmp
-/out-tsc
+
 
 # dependencies
 /node_modules
@@ -202,15 +198,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.DS_Store
-node_modules/
-/dist
-/public
 
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+
+
 
 # Editor settings
 .vscode

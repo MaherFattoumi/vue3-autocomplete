@@ -15,7 +15,6 @@
 						:selectOnTab="true"
 					/>
 				</div>
-				
 			</div>
 		</form>
 	</section>
