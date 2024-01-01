@@ -25,11 +25,6 @@
   },
   "devDependencies": {
     "@vue/cli-service": "^5.0.8",
-    "@vue/compiler-sfc": "^3.0.11",
-    "cross-env": "^7.0.3",
-    "minimist": "^1.2.5",
-    "postcss": "^8.2.10",
-    "rimraf": "^3.0.2",
     "vue": "^3.0.5"
   },
   "peerDependencies": {
