@@ -1,6 +1,6 @@
 {
   "name": "autocomplete",
-  "version": "1.0.11",
+  "version": "1.0.0",
   "description": "A simple and lightweight autocomplete Vue3 component",
   "author": "Maher Fattoumi",
   "license": "MIT",
@@ -13,23 +13,15 @@
     "vue3js",
     "vuejs3"
   ],
-  "main": "dist/autocomplete.ssr.js",
-  "browser": "dist/autocomplete.esm.js",
-  "module": "dist/autocomplete.esm.js",
-  "unpkg": "dist/autocomplete.min.js",
-  "style": "dist/autocomplete.css",
   "files": [
-    "dist/*",
     "src/**/*.vue",
-    "LICENSE",
     "README.md"
   ],
   "sideEffects": [
     "*.css"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve dev/serve.js",
-    "prebuild": "rimraf ./dist"
+    "serve": "vue-cli-service serve dev/serve.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
