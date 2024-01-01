@@ -2,6 +2,7 @@
 	<section id="app" class="container">
 		<form>
 			<div class="row">
+				<div class="column column-20"></div>
 				<div class="column column-60">
 					<autocomplete
 						ref="refTest"
@@ -15,6 +16,7 @@
 						:selectOnTab="true"
 					/>
 				</div>
+				<div class="column column-20"></div>
 			</div>
 		</form>
 	</section>

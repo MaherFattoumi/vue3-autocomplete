@@ -1,9 +1,9 @@
 <template>
-	<div :id="wrapperId" class="simple-autocomplete">
+	<div :id="wrapperId" class="xxx-autocomplete">
 		<input
 			ref="inputRef"
 			:id="inputId"
-			class="simple-autocomplete-input"
+			class="xxx-autocomplete-input"
 			type="text"
 			:placeholder="placeholder"
 			v-model="input"
@@ -17,23 +17,23 @@
 			autocomplete="off"
 			v-bind="$attrs"
 		/>
-		<div v-if="isListVisible" class="simple-autocomplete-list">
-			<div class="simple-autocomplete-list-header" v-if="$slots['list-header']"><slot name="list-header"></slot></div>
+		<div v-if="isListVisible" class="xxx-autocomplete-list">
+			<div class="xxx-autocomplete-list-header" v-if="$slots['list-header']"><slot name="list-header"></slot></div>
 			<div
-				class="simple-autocomplete-list-item"
-				:class="{ 'simple-autocomplete-list-item-active': currentSelectionIndex == index }"
+				class="xxx-autocomplete-list-item"
+				:class="{ 'xxx-autocomplete-list-item-active': currentSelectionIndex == index }"
 				v-for="(item, index) in filteredItems"
 				:key="index"
 				@mousedown.prevent
 				@click="selectItem(item)"
 				@mouseenter="currentSelectionIndex = index"
 			>
-				<span class="simple-autocomplete-list-item-text" :data-text="itemProjection(item)" v-if="$slots['list-item-text']"
+				<span class="xxx-autocomplete-list-item-text" :data-text="itemProjection(item)" v-if="$slots['list-item-text']"
 					><slot name="list-item-text" :item="item" :itemProjection="itemProjection" :boldMatchText="boldMatchText"></slot
 				></span>
-				<span class="simple-autocomplete-list-item-text" :data-text="itemProjection(item)" v-html="boldMatchText(itemProjection(item))" v-else></span>
+				<span class="xxx-autocomplete-list-item-text" :data-text="itemProjection(item)" v-html="boldMatchText(itemProjection(item))" v-else></span>
 			</div>
-			<div class="simple-autocomplete-list-footer" v-if="$slots['list-footer']"><slot name="list-footer"></slot></div>
+			<div class="xxx-autocomplete-list-footer" v-if="$slots['list-footer']"><slot name="list-footer"></slot></div>
 		</div>
 	</div>
 </template>
@@ -127,8 +127,8 @@
 			},
 			scrollSelectionIntoView() {
 				setTimeout(() => {
-					const list_node = document.querySelector(`#${this.wrapperId} .simple-autocomplete-list`);
-					const active_node = document.querySelector(`#${this.wrapperId} .simple-autocomplete-list-item.simple-autocomplete-list-item-active`);
+					const list_node = document.querySelector(`#${this.wrapperId} .xxx-autocomplete-list`);
+					const active_node = document.querySelector(`#${this.wrapperId} .xxx-autocomplete-list-item.xxx-autocomplete-list-item-active`);
 
 					if (!(active_node.offsetTop >= list_node.scrollTop && active_node.offsetTop + active_node.offsetHeight < list_node.scrollTop + list_node.offsetHeight)) {
 						let scroll_to = 0;
@@ -201,14 +201,14 @@
 </script>
 
 <style scoped>
-	.simple-autocomplete {
+	.xxx-autocomplete {
 		position: relative;
 		width: 100%;
 	}
-	.simple-autocomplete > input {
+	.xxx-autocomplete > input {
 		margin-bottom: 0;
 	}
-	.simple-autocomplete .simple-autocomplete-list {
+	.xxx-autocomplete .xxx-autocomplete-list {
 		position: absolute;
 		width: 100%;
 		border: none;
@@ -217,20 +217,20 @@
 		border-bottom: 0.1rem solid #d1d1d1;
 		z-index: 9;
 	}
-	.simple-autocomplete .simple-autocomplete-list .simple-autocomplete-list-header {
+	.xxx-autocomplete .xxx-autocomplete-list .xxx-autocomplete-list-header {
 		background-color: #fafafa;
 		padding: 0.6rem 1rem;
 		border-bottom: 0.1rem solid #d1d1d1;
 		border-left: 0.1rem solid #d1d1d1;
 		border-right: 0.1rem solid #d1d1d1;
 	}
-	.simple-autocomplete .simple-autocomplete-list .simple-autocomplete-list-footer {
+	.xxx-autocomplete .xxx-autocomplete-list .xxx-autocomplete-list-footer {
 		background-color: #fafafa;
 		padding: 0.6rem 1rem;
 		border-left: 0.1rem solid #d1d1d1;
 		border-right: 0.1rem solid #d1d1d1;
 	}
-	.simple-autocomplete .simple-autocomplete-list .simple-autocomplete-list-item {
+	.xxx-autocomplete .xxx-autocomplete-list .xxx-autocomplete-list-item {
 		cursor: pointer;
 		background-color: #fafafa;
 		padding: 0.6rem 1rem;
@@ -239,11 +239,11 @@
 		border-right: 0.1rem solid #d1d1d1;
 	}
 
-	.simple-autocomplete .simple-autocomplete-list .simple-autocomplete-list-item:last-child {
+	.xxx-autocomplete .xxx-autocomplete-list .xxx-autocomplete-list-item:last-child {
 		border-bottom: none;
 	}
 
-	.simple-autocomplete .simple-autocomplete-list .simple-autocomplete-list-item.simple-autocomplete-list-item-active {
+	.xxx-autocomplete .xxx-autocomplete-list .xxx-autocomplete-list-item.xxx-autocomplete-list-item-active {
 		background-color: #e1e1e1;
 	}
 </style>
